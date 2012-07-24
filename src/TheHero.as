@@ -17,6 +17,7 @@ package
 			super();
 			heroImage = Image.createRect(10,10, 0xFF0000);
 			setHitbox(10,10);
+			type = "Hero";
 			graphic = heroImage;
 			x = FP.screen.width / 2;
 			y = FP.screen.height / 2;

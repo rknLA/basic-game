@@ -12,6 +12,8 @@ package
 		{
 			super();
 			enemyImage = Image.createRect(16,16, 0xFFFFFF);
+			setHitbox(16,16);
+			type = "Enemy";
 			graphic = enemyImage;
 		}
 		
@@ -45,6 +47,11 @@ package
 			
 			x += FP.random * xsign;
 			y += FP.random * ysign;
+			
+			if (collide("Hero",x,y))
+			{
+				FP.world.remove(this);
+			}
 		}
 	}
 }
