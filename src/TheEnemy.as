@@ -48,10 +48,10 @@ package
 			x += FP.random * xsign;
 			y += FP.random * ysign;
 			
-			if (collide("Hero",x,y))
-			{
-				FP.world.remove(this);
-			}
+			var e:TheHero = collide("Hero", x, y) as TheHero;
+			
+			if (e) FP.world.remove(e);
+			
 		}
 	}
 }
