@@ -51,7 +51,6 @@ package
 			var e:TheHero = collide("Hero", x, y) as TheHero;
 			
 			if (e) FP.world.remove(e);
-			
 		}
 	}
 }
